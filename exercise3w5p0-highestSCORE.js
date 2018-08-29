@@ -5,7 +5,7 @@ function highestScore (students) {
     var classKey;
     var findHighestStudent = {};
     
-    // CREATING LIST OF CLASSES FROM INPUT
+
     for (var i; i<students.length; i++) { // get list of class
         var studentClass = students[i].class;
         if (listClass.includes(studentClass)) {
@@ -15,14 +15,13 @@ function highestScore (students) {
         }
     }
 
-    // CREATE OBJECT CLASSES
     for (var j=0; j<listClass.length; j++) {
         
         var schoolKey = listClass[j];
         school[schoolKey] = { name: [], score: []};
     }
     
-    // SEPARATING STUDENT INTO EACH OBJECT OF CLASSES
+    
     for (var k=0; k<students.length; k++) {
         for (l=0; l<listClass.length; l++) {
             if (students[k].class === 'foxes') {
@@ -45,18 +44,17 @@ function highestScore (students) {
         }
     }
     
-    // SORTING THE CLASS FROM THE LOWEST SCORE TO HIGHEST SCORE
+   
     for (var m=0; m<listClass.length; m++) {
         var classKey = listClass[m];
         var array1 = school[classKey].score;
         var array2 = school[classKey].name;
         
-        
-        // SORT EACH CLASS
+      
         sortArraysInSync(array1,array2);
     }
     
-    // CREATE OBJECT CLASSES FOR OBJECT findHighestStudent
+   
     for (var n=0; n<listClass.length; n++) {
         
         var schoolKey = listClass[n];
@@ -67,11 +65,10 @@ function highestScore (students) {
         
     }
     
-    // RETURN STUDENT WITH HIGHEST SCORE IN EACH CLASSES
     return findHighestStudent;
 }
 
-// FUNCTION TO SORT TWO RELATED ARRAY
+
 function sortArraysInSync (x, y) {  
     var arr = [];
     
