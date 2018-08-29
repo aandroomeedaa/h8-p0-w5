@@ -1,5 +1,5 @@
 function deepSum (arr) {
-  // Code disini
+ 
 
 if (arr === [] ){
   return "No Number"
@@ -9,10 +9,10 @@ total = 0
 for (var i=0; i<arr.length; i++){
  
   for (var j=0; j<arr[i].length; j++){
-    //console.log(arrMulti[i][j])
+   
     
     for (var k=0; k<arr[i][j].length; k++){
-     // console.log(arr[i][j][k])
+    
      total += arr[i][j][k]
     }
   }  
